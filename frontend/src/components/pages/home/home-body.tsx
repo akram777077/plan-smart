@@ -12,7 +12,7 @@ const HomeBody = () => {
           schedules, exam plans, and study tips in seconds. 
           Pick your needs, get a plan, and ace your goals!
         </p>
-        <ButtonLink link="new-plan/goal" text="Try Now"></ButtonLink>
+        <ButtonLink link="/new-plan/goal" text="Try Now"></ButtonLink>
       </section>
       <div className="img-holder sm:min-w-1/3 flex sm:block justify-center">
         <img src="./src/assets/svg/main-image.svg" alt="description image." />

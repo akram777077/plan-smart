@@ -20,7 +20,7 @@ const HomeHeader = () => {
           </NavLink>
         </li>
         <li className="hidden sm:inline-block">
-          <NavLink className={({isActive}) => isActive ? "text-primary-teal" : ""} to="/new-plan">
+          <NavLink className={({isActive}) => isActive ? "text-primary-teal" : ""} to="/new-plan/goal">
             Create a plan
           </NavLink>
         </li>
