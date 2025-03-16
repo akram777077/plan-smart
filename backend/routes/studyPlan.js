@@ -18,7 +18,7 @@ router.post('/generate-plan', async (req, res) => {
         let timeframeUnit, timeframeValue;
         const time = timeframe.toLowerCase();
 
-        if (time.includes("month")) {
+        if (time.includes("month")) {   
             const months = parseInt(time.replace(/\D/g, ""), 10) || 1;
             timeframeUnit = months <= 3 ? "weeks" : "months";
             timeframeValue = months <= 3 ? months * 4 : months;
@@ -42,6 +42,7 @@ router.post('/generate-plan', async (req, res) => {
 
         **Output Only JSON** with this structure:
         {
+          "title": "A concise and relevant title summarizing the study plan",
           "plan": [
             {
               "${timeframeUnit.slice(0, -1)}": 1,
@@ -51,11 +52,13 @@ router.post('/generate-plan', async (req, res) => {
               ],
               "summary": "Focus on fundamental algebra and physics concepts."
             }
-          ]
+          ],
+          "end": "End of Study Plan"
         }
         
         No explanations, no extra text. **Only JSON.**
         `;
+
 
         const response = await client.chat.completions.create({
             messages: [
