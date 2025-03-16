@@ -1,0 +1,1 @@
+Clean the fonts file we didn't use in our projects.
