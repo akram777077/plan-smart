@@ -1,7 +1,7 @@
 import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Login from './pages/login'
-import NewPlan from './pages/new-plan'
+import NewPlan from './pages/new-plan-layout'
 import Plans from './pages/plans'
 import NotFoundPage from './pages/not-found'
 import FuturePage from './pages/future-page'
@@ -10,6 +10,7 @@ import NewPlanReplay from './pages/new-plan-reply'
 import Home from './pages/home'
 import PlanInfo from './pages/plan-info'
 import AboutUs from './pages/about-us'
+import NewPlanLayout from './pages/new-plan-layout'
 
 function App() {
 
@@ -21,8 +22,8 @@ function App() {
 
         <Route path="/login" element={<Login />} />
 
-        <Route path="/new-plan/:param" element={<NewPlan />} />
-        <Route path="/new-plan-review" element={<NewPlanReview />} />
+        <Route path="/new-plan/:currentStep" element={<NewPlanLayout />} />
+        <Route path="/new-plan/review" element={<NewPlanReview />} />
         <Route path="/new-plan-replay" element={<NewPlanReplay />} />
 
         <Route path="/plans" element={<Plans />} />

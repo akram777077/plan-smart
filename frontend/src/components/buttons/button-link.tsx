@@ -7,7 +7,7 @@ type ButtonProps = {
 
 const ButtonLink: React.FC<ButtonProps> = ({ text, link }) => {
   return (
-    <Link to={link} className="py-2 px-5 bg-Deep-teal rounded-md text-white">
+    <Link to={link} className="py-2 px-5 bg-deep-teal rounded-md text-white">
       {text}
     </Link>
   );
