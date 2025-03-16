@@ -1,0 +1,6 @@
+Is better to avoid using multiple fonts.
+Is better to have the info about the: 
+  Colors.
+  Fonts used in the design.
+  All icons and images.
+    Avoid wasting time and searching for each one.

@@ -1,1 +1,28 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("../src/assets/fonts/Montserrat-Regular.ttf");
+  font-family: Montserrat-medium;
+  src: url("../src/assets/fonts/Montserrat-Medium.ttf");
+}
+
 @import "tailwindcss";
+
+@theme{
+  --font-montserrat: Montserrat, "sans-serif";
+  --font-montserrat-med: Montserrat-medium, "sans-serif";
+
+  /* Color Palette */
+  --color-main-black: #171A1F;
+  --color-gray-light: #D1D5DB;
+  --color-accent-cyan: #91FFF0;
+  --color-primary-teal: #00E8C9;
+  --color-dark-teal: #00594D;
+  --color-Deep-teal: #00927F;
+  --color-white: #FFFFFF;
+}
+
+body {
+  background-color: var(--color-main-black);
+  color: white;
+  font-family: var(--font-montserrat);
+}

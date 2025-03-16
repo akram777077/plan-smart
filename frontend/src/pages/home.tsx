@@ -1,8 +1,12 @@
+import HomeBody from "../components/pages/home/home-body"
+import HomeHeader from "../components/pages/home/home-header"
+
 function Home() {
 
   return (
     <>
-      Home PAGE
+      <HomeHeader />
+      <HomeBody />
     </>
   )
 }
