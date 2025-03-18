@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link, Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Login from './pages/login'
 import NewPlan from './pages/new-plan-layout'
@@ -11,33 +11,43 @@ import Home from './pages/home'
 import PlanInfo from './pages/plan-info'
 import AboutUs from './pages/about-us'
 import NewPlanLayout from './pages/new-plan-layout'
+
 import PlanHistory from './pages/plan-history'; // Add this import
+import { PlanProvider } from './context/plan-params'
+import PlanRouteGuard from './guards/plan-route-guard'
+
 
 function App() {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <PlanProvider>
+          <Routes>
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<Home />} />
 
-        <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
 
-        <Route path="/new-plan/:currentStep" element={<NewPlanLayout />} />
-        <Route path="/new-plan/review" element={<NewPlanReview />} />
-        <Route path="/new-plan-replay" element={<NewPlanReplay />} />
+            <Route 
+              path="/new-plan/:currentPlanParam" 
+              element={<PlanRouteGuard/>} 
+            />
+            <Route path="/new-plan/review" element={<NewPlanReview />} />
+            <Route path="/new-plan-replay" element={<NewPlanReplay />} />
 
-        <Route path="/plans" element={<Plans />} />
-        <Route path="/plan/:id" element={<PlanInfo />} />
+            <Route path="/plans" element={<Plans />} />
+            <Route path="/plan/:id" element={<PlanInfo />} />
 
-        <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/about-us" element={<AboutUs />} />
+
 
         <Route path="/future-page" element={<FuturePage />} />
+        <Route path="/plan-history" element={<PlanHistory />} /> {/* Add this route */}
         <Route path="*" element={<NotFoundPage />} /> {/* TODO: REAL PAGE DIDN'T EXIST */}
 
-        <Route path="/plan-history" element={<PlanHistory />} /> {/* Add this route */}
         
       </Routes>
+
     </>
   )
 }

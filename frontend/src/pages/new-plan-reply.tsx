@@ -2,7 +2,7 @@ function NewPlanReplay() {
 
   return (
     <>
-      NewPlanReplay PAGE
+      Coming Soon 🔥
     </>
   )
 }

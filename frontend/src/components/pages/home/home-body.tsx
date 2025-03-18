@@ -1,4 +1,4 @@
-import ButtonLink from "../../buttons/button-link";
+import ButtonLink from "../../links/button-link";
 
 const HomeBody = () => {
   return (
