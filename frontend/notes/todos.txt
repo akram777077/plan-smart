@@ -1,1 +1,13 @@
 Clean the fonts file we didn't use in our projects.
+Max and min of the time input didn't eliminate any thing
+think of a better structure for the pages of the planning parameters
+
+
+The button of the choices can be only one component??
+
+when we select a choice it's shrink
+
+Check unused parameters
+
+Do a check before of the validation of the data plan before let him go to 
+  /new-plan/review
