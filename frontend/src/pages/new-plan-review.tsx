@@ -37,7 +37,7 @@ function NewPlanReview() {
       </div>
 
       <div className="link-holder flex justify-center items-center gap-1 sm:gap-3">
-        <ButtonLink text="Build Your Plan" link="/new-plan-replay"  ></ButtonLink>
+        <ButtonLink text="Build Your Plan" link="/plan-history"  ></ButtonLink>
 
       </div>
     </section>
