@@ -1,18 +1,24 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { usePlan } from "../../../context/plan-params";
 
 type Params = {
-  currentStep: string; // Define the expected param type
+  currentPlanParam: string; // Define the expected param type
 };
 
 const goals = ["Study Tips", "Study Schedule", "Exam Prep"];
 
 function NewPlanGoal() {
-  const { currentStep } = useParams<Params>(); // Extracts the dynamic parameter
-  const [currGoal, setCurrGoal] = useState("");
+  const { currentPlanParam } = useParams<Params>(); // Extracts the dynamic parameter
+  const {plan, setPlan} = usePlan();
 
   return (
-    <section className="flex flex-col self-stretch items-center bg-blue-gray py-7 px-5 gap-3">
+    <section 
+      className="
+      flex flex-col self-stretch items-center 
+    bg-blue-gray py-7 px-5 gap-3 rounded-2xl
+      "
+    >
       <h3 
         className="grow mb-5 sm:mb-0 font-bold text-2xl text-primary-teal font-open-sans text-[16px]"
       >
@@ -25,21 +31,21 @@ function NewPlanGoal() {
 
       <div className="space-y-2 sm:space-y-0 sm:space-x-2">
 
-        {goals.map((goal) => (
+        {goals.map((goalText) => (
           <button
-            key={goal}
-            onClick={() => setCurrGoal(goal)}
+            key={goalText}
+            onClick={() => setPlan((prevPlan) => {return {...prevPlan, goal: goalText}})}
             className={`
               px-6 py-3 text-lg font-medium border rounded-lg transition-all 
               ${
-                currGoal === goal ? 
+                goalText === plan.goal ? 
                   "bg-primary-teal text-white shadow-lg" : 
-                  "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  "text-white border-2 border-primary-teal hover:bg-gray-700"
                 }
               w-full sm:w-auto
             `}
           >
-            {goal}
+            {goalText}
           </button>
         ))}
 
