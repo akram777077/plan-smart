@@ -11,16 +11,13 @@ import Home from './pages/home'
 import PlanInfo from './pages/plan-info'
 import AboutUs from './pages/about-us'
 import NewPlanLayout from './pages/new-plan-layout'
-import { PlanProvider, usePlan } from './context/plan-params'
+
+import PlanHistory from './pages/plan-history'; // Add this import
+import { PlanProvider } from './context/plan-params'
 import PlanRouteGuard from './guards/plan-route-guard'
-import { useEffect } from 'react'
+
 
 function App() {
-  const {plan} = usePlan();
-
-  useEffect(() => {
-    console.log(plan);
-  }, [plan]);
 
   return (
     <>
@@ -43,10 +40,14 @@ function App() {
 
             <Route path="/about-us" element={<AboutUs />} />
 
-            <Route path="/future-page" element={<FuturePage />} />
-            <Route path="*" element={<NotFoundPage />} /> {/* TODO: REAL PAGE DIDN'T EXIST */}
-          </Routes>
-        </PlanProvider>
+
+        <Route path="/future-page" element={<FuturePage />} />
+        <Route path="/plan-history" element={<PlanHistory />} /> {/* Add this route */}
+        <Route path="*" element={<NotFoundPage />} /> {/* TODO: REAL PAGE DIDN'T EXIST */}
+
+        
+      </Routes>
+
     </>
   )
 }
