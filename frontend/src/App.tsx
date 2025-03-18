@@ -11,6 +11,7 @@ import Home from './pages/home'
 import PlanInfo from './pages/plan-info'
 import AboutUs from './pages/about-us'
 import NewPlanLayout from './pages/new-plan-layout'
+import PlanHistory from './pages/plan-history'; // Add this import
 
 function App() {
 
@@ -33,6 +34,9 @@ function App() {
 
         <Route path="/future-page" element={<FuturePage />} />
         <Route path="*" element={<NotFoundPage />} /> {/* TODO: REAL PAGE DIDN'T EXIST */}
+
+        <Route path="/plan-history" element={<PlanHistory />} /> {/* Add this route */}
+        
       </Routes>
     </>
   )
