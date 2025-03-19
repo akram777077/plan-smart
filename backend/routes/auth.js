@@ -9,15 +9,18 @@ router.post('/', async (req, res) => {
 
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(401).json({ success: false, message: "Invalid email or password" });
+            return res.status(404).send();
         }
 
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
-            return res.status(401).json({ success: false, message: "Invalid email or password" });
+            return res.status(404).send();
         }
 
-        res.status(200).json({ success: true, message: "Login successful" });
+        res.status(200).json({
+            id: user._id,
+            email: user.email
+        });
     } catch (error) {
         res.status(500).json({ success: false, error: error.message });
     }
