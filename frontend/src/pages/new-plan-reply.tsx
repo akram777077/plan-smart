@@ -1,11 +1,8 @@
 import ButtonLink from "../components/links/button-link";
 import { usePlan } from "../context/plan-params";
-import handlePlanParamData from "../functions/handlePlanParamData";
 
 function NewPlanReplay() {
-  const {plan, setPlan} = usePlan();
-
-
+  const {plan} = usePlan();
 
   return (
     <section className="px-1 rounded-sm bg-obsidian-shadow py-2 md:rounded-lg md:px-3">
