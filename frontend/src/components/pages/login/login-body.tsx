@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import googleIcon from "../../../assets/svg/google.svg"; 
-import facebookIcon from "../../../assets/svg/facebook.svg"; 
-import appleIcon from "../../../assets/svg/apple.svg";
+import googleIcon from "/assets/svg/google.svg"; 
+import facebookIcon from "/assets/svg/facebook.svg"; 
+import appleIcon from "/assets/svg/apple.svg";
 
 const LoginBody = () => {
   return (
@@ -25,9 +25,12 @@ const LoginBody = () => {
         />
       </div>
 
-      <button className="w-full bg-[#00927f] text-white text-lg [font-family:'Actor',Helvetica] py-3 rounded-xl hover:bg-[#007f6d] transition-colors">
+      <Link
+        to="/new-plan/goal"
+        className="inline-block text-center w-full bg-[#00927f] text-white text-lg [font-family:'Actor',Helvetica] py-3 rounded-xl hover:bg-[#007f6d] transition-colors"
+      >
         Continue
-      </button>
+      </Link>
 
       <div className="flex items-center my-6">
         <div className="flex-grow h-px bg-gray-300"></div>

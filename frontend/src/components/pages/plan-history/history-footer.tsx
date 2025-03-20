@@ -1,4 +1,4 @@
-import helpIcon from "../../../assets/svg/help-circle.svg"
+import helpIcon from "/assets/svg/help-circle.svg"
 
 const PlanHistoryFooter = () => {
   return (

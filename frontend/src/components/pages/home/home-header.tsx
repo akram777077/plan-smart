@@ -4,7 +4,7 @@ const HomeHeader = () => {
   return (
     <header className="flex items-center justify-between py-2 mb-3">
       <div className="logo-name flex justify-center items-center gap-1 md:gap-3">
-        <img src="./src/assets/svg/logo.svg" alt="Logo image." />
+        <img src="/assets/svg/logo.svg" alt="Logo image." />
         <p className="font-bold text-3xl">Plan Smart</p>
       </div>
 

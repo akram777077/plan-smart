@@ -2,6 +2,7 @@ import { usePlan } from "../context/plan-params";
 import NewPlanParamsInfo from "../components/pages/new-plan-review.tsx/new-plan-param-info";
 import handlePlanParamData from "../functions/handlePlanParamData";
 import ButtonLink from "../components/links/button-link";
+import { Link } from "react-router-dom";
 
 function NewPlanReview() {
   const { plan } = usePlan();
@@ -38,8 +39,11 @@ function NewPlanReview() {
       </div>
 
       <div className="link-holder flex justify-center items-center gap-1 sm:gap-3">
+        <Link 
+          className="py-2 px-5 rounded-md border border-red-500" 
+          to="/plan-history"
+        >Cancel</Link>       
         <ButtonLink text="Build Your Plan" link="/plan-history" />
-
       </div>
     </section>
 )

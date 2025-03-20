@@ -1,5 +1,5 @@
 const determineText = (mode: string | null) => {
-  if (mode === "edit") return "Build Your Plan";
+  if (mode === "edit") return "Review Plan";
   return "Next Step"
 };
 

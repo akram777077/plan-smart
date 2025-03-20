@@ -1,4 +1,4 @@
-import planSmartLogo from "../../../assets/svg/logo.svg";
+import planSmartLogo from "/assets/svg/logo.svg";
 
 const LoginHeader = () => {
   return (

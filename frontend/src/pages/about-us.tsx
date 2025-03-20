@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import linkedinIcon from "../../src/assets/svg/linkedin.svg";
+import linkedinIcon from "/assets/svg/linkedin.svg";
 
 const teamMembers = [
   {

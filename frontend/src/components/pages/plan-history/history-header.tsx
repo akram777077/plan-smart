@@ -1,5 +1,5 @@
 import { Bell } from 'lucide-react';
-import Logo from '../../../assets/svg/logo.svg';
+import Logo from '/assets/svg/logo.svg';
 
 const PlanHistoryHeader = () => {
   return (

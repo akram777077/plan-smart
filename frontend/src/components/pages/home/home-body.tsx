@@ -15,7 +15,7 @@ const HomeBody = () => {
         <ButtonLink link="/new-plan/goal" text="Try Now"></ButtonLink>
       </section>
       <div className="img-holder sm:min-w-1/3 flex sm:block justify-center">
-        <img src="./src/assets/svg/main-image.svg" alt="description image." />
+        <img src="/assets/svg/main-image.svg" alt="description image." />
       </div>
     </main>
   );

@@ -1,8 +1,8 @@
 // plan-history-right-sidebar.tsx
 import { Plan } from "../../pages/plan-history/models/plan"
-import share from "../../../assets/svg/share.svg"
-import download from "../../../assets/svg/download.svg"
-import startOver from "../../../assets/svg/refresh.svg"
+import share from "/assets/svg/share.svg"
+import download from "/assets/svg/download.svg"
+import startOver from "/assets/svg/refresh.svg"
 import { Link } from "react-router-dom";
 
 interface PlanHistoryRightSidebarProps {

@@ -16,3 +16,8 @@ Do a check before of the validation of the data plan before let him go to
 Finish the UI details.
 
 If the user build the plan remove the previous choosen parameters
+Start Over link should cause a plan cleaning
+
+Check plugins and if we need them:
+  vite-plugin-svgr
+  Houssam Icon Plugin

@@ -1,8 +1,8 @@
 // plan-history-sidebar.tsx
 import { Plan } from "../../pages/plan-history/models/plan"
-import messages from "../../../assets/svg/messages.svg"
-import checkmark from "../../../assets/svg/checkmark.svg"
-import search from "../../../assets/svg/search.svg"
+import messages from "/assets/svg/messages.svg"
+import checkmark from "/assets/svg/checkmark.svg"
+import search from "/assets/svg/search.svg"
 
 interface PlanHistorySidebarProps {
   plans: Plan[];
