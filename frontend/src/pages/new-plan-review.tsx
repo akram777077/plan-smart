@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
 import { usePlan } from "../context/plan-params";
 import NewPlanParamsInfo from "../components/pages/new-plan-review.tsx/new-plan-param-info";
 import handlePlanParamData from "../functions/handlePlanParamData";
-import PlanParamsType from "../types/plan-param-type";
 import ButtonLink from "../components/links/button-link";
 
 function NewPlanReview() {
-  const { plan, setPlan } = usePlan();
+  const { plan } = usePlan();
 
   return (
     <section className="h-dvh md:py-5 md:px-8">

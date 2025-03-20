@@ -1,10 +1,4 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
 import { usePlan } from "../../../context/plan-params";
-
-type Params = {
-  currentPlanParam: string; // Define the expected param type
-};
 
 const subjects = [
   "Math","Science","History","Geology","Economics",
@@ -13,7 +7,6 @@ const subjects = [
 ];
 
 function NewPlanSubjects() {
-  const { currentPlanParam } = useParams<Params>(); // Extracts the dynamic parameter
   const {plan, setPlan} = usePlan();
 
   const handleSubjectClick = (e: React.MouseEvent<HTMLButtonElement>) => {

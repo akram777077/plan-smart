@@ -1,15 +1,8 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
 import { usePlan } from "../../../context/plan-params";
-
-type Params = {
-  currentPlanParam: string; // Define the expected param type
-};
 
 const goals = ["Study Tips", "Study Schedule", "Exam Prep"];
 
 function NewPlanGoal() {
-  const { currentPlanParam } = useParams<Params>(); // Extracts the dynamic parameter
   const {plan, setPlan} = usePlan();
 
   return (

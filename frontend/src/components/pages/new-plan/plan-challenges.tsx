@@ -1,10 +1,4 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
 import { usePlan } from "../../../context/plan-params";
-
-type Params = {
-  currentPlanParam: string; // Define the expected param type
-};
 
 const challenges = [
   "Memorizing", "Understanding Concepts","Time Management","Motivation",

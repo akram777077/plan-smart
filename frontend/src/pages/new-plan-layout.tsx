@@ -17,7 +17,7 @@ function NewPlanLayout() {
   const [searchParams] = useSearchParams();
 
   const mode = searchParams.get("mode");
-  const { plan, setPlan } = usePlan();
+  const { plan } = usePlan();
 
   return (
     <section className="h-dvh md:py-5 md:px-8">

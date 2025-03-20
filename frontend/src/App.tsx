@@ -1,7 +1,6 @@
-import { Link, Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './pages/login';
-import NewPlan from './pages/new-plan-layout';
 import Plans from './pages/plans';
 import NotFoundPage from './pages/not-found';
 import FuturePage from './pages/future-page';
@@ -10,7 +9,6 @@ import NewPlanReplay from './pages/new-plan-reply';
 import Home from './pages/home';
 import PlanInfo from './pages/plan-info';
 import AboutUs from './pages/about-us';
-import NewPlanLayout from './pages/new-plan-layout';
 import PlanHistory from './pages/plan-history';
 import { PlanProvider } from './context/plan-params';
 import PlanRouteGuard from './guards/plan-route-guard';
