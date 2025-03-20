@@ -3,7 +3,7 @@ const Plan = require('../models/plan');
 
 const router = express.Router();
 
-// Create a new plan
+// Create a new plan TODO: is not a create process it's saving.
 router.post('/', async (req, res) => {
     try {
         const { userId, goal, timeframe, subjects, challenges, planResponse } = req.body;

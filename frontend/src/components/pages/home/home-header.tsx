@@ -30,6 +30,11 @@ const HomeHeader = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink end className={({isActive}) => isActive ? "text-primary-teal" : ""} to="/plan-history">
+            My Plans
+          </NavLink>
+        </li>
+        <li>
           <NavLink end className={({isActive}) => isActive ? "text-primary-teal" : ""} to="/login">
             Login
           </NavLink>

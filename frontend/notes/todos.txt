@@ -21,3 +21,7 @@ Start Over link should cause a plan cleaning
 Check plugins and if we need them:
   vite-plugin-svgr
   Houssam Icon Plugin
+
+Go back home button as component
+
+remove any as much as we can 

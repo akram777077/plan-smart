@@ -43,7 +43,7 @@ function NewPlanReview() {
           className="py-2 px-5 rounded-md border border-red-500" 
           to="/plan-history"
         >Cancel</Link>       
-        <ButtonLink text="Build Your Plan" link="/plan-history" />
+        <ButtonLink text="Build Your Plan" link="/new-plan-replay" />
       </div>
     </section>
 )

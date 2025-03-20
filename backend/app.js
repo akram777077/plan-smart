@@ -11,7 +11,9 @@ mongoose.connect('mongodb://localhost:27017/plan-smart')
     .catch(err => console.log('❌ MongoDB connection error:', err));
 
 var app = express();
+var cors = require('cors')
 
+app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -19,6 +21,7 @@ app.use(cookieParser());
 app.use(express.static(pathModule.join(__dirname, 'public')));
 
 const routesPath = pathModule.join(__dirname, 'routes');
+
 fs.readdirSync(routesPath).forEach(file => {
   if (file.endsWith('.js')) {
     const route = require(`./routes/${file}`);

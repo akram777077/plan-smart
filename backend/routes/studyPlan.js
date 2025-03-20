@@ -13,7 +13,8 @@ router.post('/generate-plan', async (req, res) => {
         const { goal, timeframe, subjects, challenges } = req.body;
 
         if (!goal || !timeframe || !subjects || !challenges) {
-            return res.status(400).json({ error: "All parameters (goal, timeframe, subjects, challenges) are required." });
+            return res.status(400)
+                .json({ error: "All parameters (goal, timeframe, subjects, challenges) are required." });
         }
 
         let timeframeValue = parseInt(timeframe, 10);
