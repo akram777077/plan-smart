@@ -28,7 +28,7 @@ const PlanHistory = () => {
       try {
         setLoading(true);
         const res = await getUserPlans();
-        console.log(res);
+
         const plans = res.data;
         setUserPlans(plans);
 
@@ -48,13 +48,11 @@ const PlanHistory = () => {
   }, []);
 
   useEffect(() => {
-    console.log("GET ONE PLAN DATA IS WORKING...");
-    
     if (planId) {
       const fetchPlanDetails = async () => {
         try {
           const planDetails = await getPlanDetails(planId);
-          console.log("plan data", planDetails);
+
           setSelectedPlanData(planDetails.data);
         } catch (err) {
           setError("Failed to fetch plan details.");

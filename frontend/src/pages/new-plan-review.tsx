@@ -26,7 +26,6 @@ function NewPlanReview() {
         {
           Object.keys(plan).map(
             (param) => {
-              console.log(Object.keys(plan), plan);
               const {paramTitle, paramVal, paramPath} = handlePlanParamData(param);
 
               return <NewPlanParamsInfo 
