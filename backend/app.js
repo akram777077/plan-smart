@@ -26,7 +26,6 @@ fs.readdirSync(routesPath).forEach(file => {
   if (file.endsWith('.js')) {
     const route = require(`./routes/${file}`);
     const routeName = file === 'index.js' ? '/' : `/${file.replace('.js', '')}`;
-    console.log(`📌 Registering route: ${routeName}`);
     app.use(routeName, route);
   }
 });

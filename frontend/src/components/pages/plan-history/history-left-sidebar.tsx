@@ -10,9 +10,7 @@ interface PlanHistorySidebarProps {
   onSelectPlan: (id: string) => void;
 }
 
-const PlanHistorySidebar = ({ plans, selectedPlanId, onSelectPlan }: PlanHistorySidebarProps) => {
-  console.log("selectedPlanId", selectedPlanId);
-  console.log("plans", plans);
+const PlanHistorySidebar = ({ plans }: PlanHistorySidebarProps) => {
   const navigate = useNavigate();
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
