@@ -5,14 +5,12 @@ const handlePlanParamData =
     {paramTitle: string, paramVal: string, paramPath: string} => 
 {
   const {plan} = usePlan();
-
-  console.log(plan)
   
   if(param === "goal") {
     return {
       paramTitle: "Your Goal:",
       paramVal: plan.goal,
-      paramPath: "/new-plan/goal"
+      paramPath: "goal"
     }
   };
 
@@ -20,7 +18,7 @@ const handlePlanParamData =
     return {
       paramTitle: "Your Timeframe:",
       paramVal: String(plan.time),
-      paramPath: "/new-plan/time"
+      paramPath: "time"
     }
   }
 
@@ -28,14 +26,14 @@ const handlePlanParamData =
     return {
       paramTitle: "Your Subjects:",
       paramVal: Array.from(plan.subjects).join(", "),
-      paramPath: "/new-plan/subjects"
+      paramPath: "subjects"
     }
   }
 
   return {
     paramTitle: "Your Challenges:",
     paramVal: Array.from(plan.challenges).join(", "),
-    paramPath: "/new-plan/challenges"
+    paramPath: "challenges"
   }
 }
 

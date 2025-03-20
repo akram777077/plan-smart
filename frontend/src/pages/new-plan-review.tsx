@@ -12,7 +12,10 @@ function NewPlanReview() {
     <section className="h-dvh md:py-5 md:px-8">
       <header className="text-center sm:text-start gap-4 mb-5">
         <h2 className="grow mb-2 font-bold text-3xl text-primary-teal">Review Your Smart Plan</h2>
-        <p className="mb-5">Check your choices below and tweak them if needed. Ready to let PlanSmart AI create your perfect plan?</p>
+        <p className="mb-5">
+          Check your choices below and tweak them if needed. 
+          Ready to let PlanSmart AI create your perfect plan?
+        </p>
       </header>
 
       <div 
@@ -37,7 +40,7 @@ function NewPlanReview() {
       </div>
 
       <div className="link-holder flex justify-center items-center gap-1 sm:gap-3">
-        <ButtonLink text="Build Your Plan" link="/plan-history"  ></ButtonLink>
+        <ButtonLink text="Build Your Plan" link="/plan-history" />
 
       </div>
     </section>

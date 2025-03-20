@@ -1,6 +1,10 @@
 import PlanParamsType from "../types/plan-param-type";
 
-const detectNextRoute = (currentParam: PlanParamsType) => {
+const detectNextRoute = (currentParam: PlanParamsType, mode: string | null) => {
+  console.log(mode, currentParam);
+  
+  if (mode === "edit") return "/new-plan/review";
+
   switch(currentParam) {
     case "goal": return "/new-plan/time"
     case "time": return "/new-plan/subjects"

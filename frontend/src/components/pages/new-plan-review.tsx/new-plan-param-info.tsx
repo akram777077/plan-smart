@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { usePlan } from "../../../context/plan-params";
+import { Link} from "react-router-dom";
 
 type Params = {
   paramTitle: string;
@@ -22,13 +20,11 @@ function NewPlanParamsInfo(
       text-primary-teal text-xs sm:text-sm 
       "
     >
-      <h4 
-        className="grow mb-5 sm:mb-0 font-bold text-2xl font-open-sans text-[16px]"
-      >
-        {paramTitle}
-      </h4>
+      <h3
+        className="sm:mb-0 font-bold text-4xl font-open-sans text-[16px]"
+      > {paramTitle} </h3>
 
-      <p className="text-center text-lg sm:text-2xl">
+      <p className="grow flex justify-center items-center text-lg sm:text-2xl">
         {paramVal}
       </p>
 

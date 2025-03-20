@@ -9,5 +9,10 @@ when we select a choice it's shrink
 
 Check unused parameters
 
+Validation:
 Do a check before of the validation of the data plan before let him go to 
   /new-plan/review
+
+Finish the UI details.
+
+If the user build the plan remove the previous choosen parameters
